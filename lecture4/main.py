@@ -1,4 +1,9 @@
-for out_idx in range(3):
-    print(f"Spouštím {out_idx}. běh vnějšího cyklu.")
-    for in_idx in range(2):
-        print(f"\tSpouštím {in_idx}. běh vnitřního cyklu.")
+from random import randrange
+cycles = int(input("Zadajte počet terčov: "))
+for cycle in range(0,cycles):
+    hits = 0
+    for i in range(0,8):
+        if randrange(0, 101)>45:
+            hits = hits+1
+    print(f"Terč číslo: {cycle+1} {hits/8*100}% úspešnosť")
+
